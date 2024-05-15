@@ -3,29 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penggunaan Kertas Departemen 1</title>
+    <title>Konversi KG ke KGCO2</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Penggunaan Kertas Departemen 1</h1>
+        <h1>Konversi KG ke KGCO2</h1>
         <div class="back-button">
             <button onclick="window.location.href='index.html'">Kembali ke Halaman Utama</button>
         </div>
-        <div id="data-departemen">
-            <h2>Data Penggunaan Kertas</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Bulan</th>
-                        <th>Penggunaan (lembar)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Data dari Excel -->
-                </tbody>
-            </table>
+        <div id="konversi-kg">
+            <h2>Konversi Penggunaan Kertas</h2>
+            <label for="kg">Penggunaan Kertas (kg):</label>
+            <input type="number" id="kg" name="kg">
+            <button onclick="hitung()">Hitung</button>
+            <div class="result">
+                <p id="kgco2">Jumlah Emisi CO2 (kg): </p>
+            </div>
         </div>
     </div>
-</body>
-</html>
+
+    <script>
+        function hitung() {
+            var kg = document.getElementById("
